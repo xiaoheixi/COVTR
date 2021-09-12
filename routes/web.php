@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//Route to admin home page
 Route::get('/adminHomePage',function () {
     return 'Welcome to the admin page';
 });
