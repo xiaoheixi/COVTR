@@ -19,5 +19,5 @@ Route::get('/', function () {
 
 //Route to admin home page
 Route::get('/adminHomePage',function () {
-    return 'Welcome to the admin page';
+    return view('adminHomePage');
 });
