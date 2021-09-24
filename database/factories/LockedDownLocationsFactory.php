@@ -23,7 +23,7 @@ class LockedDownLocationsFactory extends Factory
     public function definition()
     {
         return [
-            'Location' => $this->faker->Location,
+            'Location' => $this->faker->Location(),
             'Days' => $this->faker->Days,
             'created_at' => now(),
         ];

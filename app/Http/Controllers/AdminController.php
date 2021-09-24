@@ -2,12 +2,18 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
     public function index(){
-        $numberOfLockedDownLocations = "Number of Locked Down Locations";
+        $numberOfLockedDownLocations = DB::table('locked_down_locations')
+        ->count();
         $numberOfUsers = "Number of Users";
-        return view('admin.adminHomePage', compact('numberOfLockedDownLocations', 'numberOfUsers'));
+        $LockedDownLocations = DB::table('locked_down_locations')
+            ->get();
+        dd($numberOfLockedDownLocations);
+        dd($LockedDownLocations);
+        //return view('admin.adminHomePage', compact('numberOfLockedDownLocations', 'numberOfUsers'));
     }
 }
