@@ -6,7 +6,7 @@ use App\Models\LockedDownLocations;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
-class LocationFactory extends Factory
+class LockedDownLocationsFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
