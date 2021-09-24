@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     public function index(){
-        return view('admin.adminHomePage');
+        $numberOfLockedDownLocations = "Number of Locked Down Locations";
+        $numberOfUsers = "Number of Users";
+        return view('admin.adminHomePage', compact('numberOfLockedDownLocations', 'numberOfUsers'));
     }
 }

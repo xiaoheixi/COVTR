@@ -13,4 +13,4 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::view('/admin', 'admin.adminHomePage');
+Route::get('/admin', [AdminController::class, 'index']);
