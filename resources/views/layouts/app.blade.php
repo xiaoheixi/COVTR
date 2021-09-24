@@ -5,9 +5,5 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-    <h1>Dashboard</h1>
-    <p>{{ $numberOfLockedDownLocations }}</p>
-    <p>{{ $numberOfUsers }}</p>
-</body>
+@yield('content')
 </html>
