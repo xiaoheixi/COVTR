@@ -16,4 +16,22 @@ class AdminController extends Controller
         dd($LockedDownLocations);
         //return view('admin.adminHomePage', compact('numberOfLockedDownLocations', 'numberOfUsers'));
     }
+    public function addLockedDownLocation(){
+        $lockedDownLocation = DB::table('locked_down_locations')
+        ->insert([
+            'location' => 'New Location', 'days' => 'New Days'
+        ]);
+    }
+    public function modifyLockedDownLocation(){
+        $lockedDownLocation = DB::table('locked_down_locations')
+        ->where('id', '=', 15)
+        ->update([
+            'location' => 'Modified Location', 'days' => 'Modified Days'
+        ]);
+    }
+    public function deleteLockedDownLocation(){
+        $lockedDownLocation = DB::table('locked_down_locations')
+        ->where('id', '=', 15)
+        ->delete();
+    }
 }
