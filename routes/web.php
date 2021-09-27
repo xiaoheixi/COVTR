@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LocationsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +15,4 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/admin', [AdminController::class, 'index']);
+Route::resource('/', LocationsController::class);
