@@ -15,4 +15,4 @@ use App\Http\Controllers\LocationsController;
 */
 
 Route::get('/admin', [AdminController::class, 'index']);
-Route::resource('/', LocationsController::class);
+Route::resource('/locations', LocationsController::class);
