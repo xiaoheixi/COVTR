@@ -10,8 +10,15 @@
     <tr>
         <th>Location</th>
         <th>Days</th>
-        <th>Modify</th>
-        <th>Delete</th>
+    </tr>
+    @foreach ($locations as $location)
+        <tr>
+            <th>{{ $location->location }}</th>
+            <th>{{ $location->days }}</th>
+            <th><button type="button">Modify</button></th>
+            <th><button type="button">Delete</button></th>
+        </tr>
+    @endforeach
 </table>
 <p>Users</p>
 <button>Add User</button>
@@ -20,5 +27,6 @@
         <th>Username</th>
         <th>Password</th>
         <th>Account Status</th>
+    </tr>
 </table>
 @endsection
