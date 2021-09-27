@@ -15,8 +15,9 @@ class LocationsController extends Controller
     public function index()
     {
         $locations = Location::all();
-        dd($locations);
-        return view('locations.index');
+        return view('locations.index', [
+            'locations' => $locations
+        ]);
     }
 
     /**
