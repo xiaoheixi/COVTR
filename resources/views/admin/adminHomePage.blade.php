@@ -5,7 +5,7 @@
 <p>{{ $numberOfLockedDownLocations }}</p>
 <p>{{ $numberOfUsers }}</p>
 <p>Locked Down Locations</p>
-<button>Add Locked Down Location</button>
+<a href="locations/create">Add Locked Down Location</a>
 <table>
     <tr>
         <th>Location</th>
