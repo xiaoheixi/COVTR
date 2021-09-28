@@ -2,7 +2,7 @@
 
 @section('content')
     <h1>Modify Lockdown Location</h1>
-    <form action="/locations" method="POST">
+    <form action="/locations/{{ $location->id }}" method="POST">
         @csrf
         @method('PUT')
         <input type="text" name="location" value="{{ $location->location }}">
