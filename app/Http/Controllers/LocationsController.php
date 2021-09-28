@@ -96,6 +96,6 @@ class LocationsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        dd($id);
     }
 }
