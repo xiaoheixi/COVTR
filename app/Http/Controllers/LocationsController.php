@@ -94,10 +94,8 @@ class LocationsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Location $location)
     {
-        $location = Location::find($id)->first();
-
         $location->delete();
 
         return redirect('/admin');
