@@ -39,7 +39,7 @@ class LocationsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd('ok');
     }
 
     /**
