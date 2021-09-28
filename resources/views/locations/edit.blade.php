@@ -4,8 +4,8 @@
     <h1>Modify Lockdown Location</h1>
     <form action="/locations" method="POST">
         @csrf
-        <input type="text" name="location" placeholder="Location">
-        <input type="text" name="days" placeholder="Days">
+        <input type="text" name="location" value="{{ $location->location }}">
+        <input type="text" name="days" value="{{ $location->days }}">
         <button type="submit">
             Submit
         </button>
