@@ -66,6 +66,8 @@ class LocationsController extends Controller
      */
     public function edit($id)
     {
+        $location = Location::find($id);
+        dd($location);
         return view('locations.create');
     }
 
