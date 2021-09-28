@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Add Lockdown Location</h1>
+    <h1>Modify Lockdown Location</h1>
     <form action="/locations" method="POST">
         @csrf
         <input type="text" name="location" placeholder="Location">

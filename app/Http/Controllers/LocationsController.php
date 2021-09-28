@@ -66,9 +66,8 @@ class LocationsController extends Controller
      */
     public function edit($id)
     {
-        $location = Location::find($id);
-        dd($location);
-        return view('locations.create');
+        $location = Location::find($id)->first();
+        return view('locations.edit')->with('location', $location);
     }
 
     /**
