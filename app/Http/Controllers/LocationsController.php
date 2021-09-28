@@ -39,7 +39,10 @@ class LocationsController extends Controller
      */
     public function store(Request $request)
     {
-        dd('ok');
+        $location = Location::create([
+            'location' => $request->input('location'),
+            'days' => $request->input('days')
+        ]);
     }
 
     /**
