@@ -15,5 +15,5 @@ class Location extends Model
 
     public $timestamps = true;
 
-    protected $fillable = [];
+    protected $fillable = ['location', 'days'];
 }
