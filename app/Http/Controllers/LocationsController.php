@@ -43,6 +43,8 @@ class LocationsController extends Controller
             'location' => $request->input('location'),
             'days' => $request->input('days')
         ]);
+
+        return redirect('/admin');
     }
 
     /**
