@@ -96,6 +96,10 @@ class LocationsController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
+        $location = Location::find($id)->first();
+
+        $location->delete();
+
+        return redirect('/admin');
     }
 }
