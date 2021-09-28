@@ -79,7 +79,13 @@ class LocationsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $location = Location::where('id', $id)
+            ->update([
+                'location' => $request->input('location'),
+                'days' => $request->input('days')
+        ]);
+
+        return redirect('/admin');
     }
 
     /**
