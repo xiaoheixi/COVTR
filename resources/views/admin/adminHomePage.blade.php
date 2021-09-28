@@ -15,7 +15,7 @@
         <tr>
             <th>{{ $location->location }}</th>
             <th>{{ $location->days }}</th>
-            <th><button type="button">Modify</button></th>
+            <th><a href="locations/{{ $location->id }}/edit">Modify</a></th>
             <th><button type="button">Delete</button></th>
         </tr>
     @endforeach
