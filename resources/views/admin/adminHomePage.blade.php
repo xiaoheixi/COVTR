@@ -16,7 +16,14 @@
             <th>{{ $location->location }}</th>
             <th>{{ $location->days }}</th>
             <th><a href="locations/{{ $location->id }}/edit">Modify</a></th>
-            <th><button type="button">Delete</button></th>
+            <th><form action="/locations/{{ $location->id }}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button type="submit">
+                        Delete
+                    </button>
+                </form>
+            </th>
         </tr>
     @endforeach
 </table>
