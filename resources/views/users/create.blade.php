@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Add Lockdown Location</h1>
-    <form action="/locations" method="POST">
+    <h1>Add User</h1>
+    <form action="/users" method="POST">
         @csrf
-        <input type="text" name="location" placeholder="Location">
-        <input type="text" name="days" placeholder="Days">
+        <input type="text" name="username" placeholder="Username">
+        <input type="text" name="password" placeholder="Password">
         <button type="submit">
             Submit
         </button>
