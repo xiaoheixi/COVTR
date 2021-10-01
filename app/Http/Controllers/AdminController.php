@@ -16,6 +16,6 @@ class AdminController extends Controller
         ->get();
         $users = DB::table('users')
         ->get();
-        return view('admin.adminHomePage', compact('numberOfLockedDownLocations', 'numberOfUsers', 'locations'));
+        return view('admin.adminHomePage', compact('numberOfLockedDownLocations', 'numberOfUsers', 'locations', 'users'));
     }
 }
