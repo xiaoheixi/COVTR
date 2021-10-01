@@ -6,7 +6,7 @@
         @csrf
         @method('PUT')
         <input type="text" name="username" value="{{ $user->username }}">
-        <input type="text" name="password" value="{{ $user->passwordedit. }}">
+        <input type="text" name="password" value="{{ $user->password }}">
         <button type="submit">
             Submit
         </button>
