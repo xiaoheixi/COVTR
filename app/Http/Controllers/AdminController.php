@@ -14,7 +14,7 @@ class AdminController extends Controller
         ->count();
         $locations = DB::table('locations')
         ->get();
-        $locations = DB::table('users')
+        $users = DB::table('users')
         ->get();
         return view('admin.adminHomePage', compact('numberOfLockedDownLocations', 'numberOfUsers', 'locations'));
     }
