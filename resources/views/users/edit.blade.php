@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>Modify Lockdown Location</h1>
-    <form action="/locations/{{ $location->id }}" method="POST">
+    <h1>Modify User</h1>
+    <form action="/users/{{ $user->id }}" method="POST">
         @csrf
         @method('PUT')
-        <input type="text" name="location" value="{{ $location->location }}">
-        <input type="text" name="days" value="{{ $location->days }}">
+        <input type="text" name="username" value="{{ $user->username }}">
+        <input type="text" name="password" value="{{ $user->passwordedit. }}">
         <button type="submit">
             Submit
         </button>
