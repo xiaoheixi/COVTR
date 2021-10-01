@@ -2,23 +2,23 @@
 
 @section('content')
     <h1>
-        Locations
+        Users
     </h1>
     <table>
         <tr>
-            <th>Location</th>
-            <th>Days</th>
+            <th>Username</th>
+            <th>Password</th>
         </tr>
-        @foreach ($locations as $location)
+        @foreach ($users as $user)
             <tr>
-                <th>{{ $location->location }}</th>
-                <th>{{ $location->days }}</th>
+                <th>{{ $user->username }}</th>
+                <th>{{ $user->password }}</th>
                 <th><button type="button">Modify</button></th>
                 <th><button type="button">Delete</button></th>
             </tr>
         @endforeach
     </table>
-        @foreach ($locations as $location)
+        @foreach ($users as $user)
 
         @endforeach
 @endsection
