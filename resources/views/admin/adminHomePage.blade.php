@@ -2,8 +2,8 @@
 
 @section('content')
 <h1>Dashboard</h1>
-<p>{{ $numberOfLockedDownLocations }}</p>
-<p>{{ $numberOfUsers }}</p>
+<p>{{ $numberOfLockedDownLocations }} locations locked down</p>
+<p>{{ $numberOfUsers }} users</p>
 <p>Locked Down Locations</p>
 <a href="locations/create">Add Locked Down Location</a>
 <table>
@@ -28,12 +28,26 @@
     @endforeach
 </table>
 <p>Users</p>
-<button>Add User</button>
+<a href="users/create">Add User</a>
 <table>
     <tr>
         <th>Username</th>
         <th>Password</th>
-        <th>Account Status</th>
     </tr>
+    @foreach ($users as $user)
+        <tr>
+            <th>{{ $user->username }}</th>
+            <th>{{ $user->password }}</th>
+            <th><a href="users/{{ $user->id }}/edit">Modify</a></th>
+            <th><form action="/users/{{ $user->id }}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button type="submit">
+                        Delete
+                    </button>
+                </form>
+            </th>
+        </tr>
+    @endforeach
 </table>
 @endsection
