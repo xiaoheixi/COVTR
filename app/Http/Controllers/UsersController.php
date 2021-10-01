@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UsersController extends Controller
 {
@@ -13,7 +14,10 @@ class UsersController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('users.index', [
+            'users' => $users
+        ]);
     }
 
     /**
@@ -23,7 +27,8 @@ class UsersController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('users.create');
     }
 
     /**
@@ -34,7 +39,12 @@ class UsersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $location = User::create([
+            'username' => $request->input('username'),
+            'password' => $request->input('password')
+        ]);
+
+        return redirect('/admin');
     }
 
     /**
@@ -56,7 +66,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('users.edit')->with('user', $user);
     }
 
     /**
@@ -68,7 +79,13 @@ class UsersController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::where('id', $id)
+            ->update([
+                'username' => $request->input('username'),
+                'password' => $request->input('password')
+        ]);
+
+        return redirect('/admin');
     }
 
     /**
@@ -77,8 +94,10 @@ class UsersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(User $user)
     {
-        //
+        $user->delete();
+
+        return redirect('/admin');
     }
 }
