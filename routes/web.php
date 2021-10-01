@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LocationsController;
+use App\Http\Controller\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
