@@ -10,8 +10,11 @@ class AdminController extends Controller
     public function index(){
         $numberOfLockedDownLocations = DB::table('locations')
         ->count();
-        $numberOfUsers = "Number of Users";
+        $numberOfUsers = DB::table('users')
+        ->count();
         $locations = DB::table('locations')
+        ->get();
+        $locations = DB::table('users')
         ->get();
         return view('admin.adminHomePage', compact('numberOfLockedDownLocations', 'numberOfUsers', 'locations'));
     }
