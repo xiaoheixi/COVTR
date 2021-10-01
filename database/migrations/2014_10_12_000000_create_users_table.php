@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
         //     $table->rememberToken();
         //     $table->timestamps();
         // });
-        Schema::create('locations', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->string('username');
             $table->string('password');
