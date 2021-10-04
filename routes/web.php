@@ -18,9 +18,6 @@ use App\Http\Controllers\UsersController;
 Route::resource('admin', AdminController::class);
 Route::resource('locations', LocationsController::class);
 Route::resource('users', UsersController::class);
-Route::get('/', function () {
-    return view('/');
-});
 // Auth::routes();
 
 // Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
